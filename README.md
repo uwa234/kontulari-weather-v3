@@ -14,9 +14,11 @@ Let's take a look at the weather forecast? This challenge aims to add some featu
 
 You must implement these features:
 
-- At least 3 more information to the WeatherCard.jsx
-- Make the application responsive for at least two screens (smartphone and tablet)
-- Create a light/dark mode (you can use a combinantion of these colors: coral (#FD657E ) blue(#002E46) green (#1DE9B6), white (#fff))
+- At least three more information to the WeatherCard.jsx;
+- Make the application responsive for at least three screens (smartphone, tablet and notebook);
+- Create a light/dark mode (you can use a combinantion of these colors: coral (#FD657E ) blue(#002E46) green (#1DE9B6), white (#fff));
+- Add a tip of what to do according to the weather of the day (exemple, if it is sunny you can go to the beach);
+- Implement unity test on the main screen;
 
 In addition, you must fix some bugs.
 
@@ -47,7 +49,7 @@ First of all, create a fork form this project, and clone for your local reposito
 
 ## Deadline
 
-After receive, you have two days for conclude the challenge. Then, send a Pull Request to this repository link from the fork that was created.
+After receive, you have three days to conclude the challenge. Then, send a Pull Request to this repository link from the fork that was created.
 
 ## Attention
 
