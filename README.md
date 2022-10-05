@@ -49,8 +49,7 @@ First of all, create a fork form this project, and clone for your local reposito
 
 ## Deadline
 
-After receive, you have three days to conclude the challenge. Then, send a Pull Request to this repository link from the fork that was created.
-
+day
 ## Attention
 
 **This code is yours**. We will not use any code implemented in this challenge.
