@@ -1,0 +1,9 @@
+.dark {
+    background: black !important;
+    color: white !important;
+}
+
+.dark h1, h6, span, p {
+    color: white !important;
+}
+  

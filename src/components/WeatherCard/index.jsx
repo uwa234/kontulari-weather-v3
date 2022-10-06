@@ -4,10 +4,22 @@ import styled from "styled-components";
 const WeatherCard = (props) => {
   const [forecast] = useState(props.forecast);
 
+  function calculateWeatherCondition() {
+    if (forecast.current.temp > 25) {
+      return (<p>Tip: Go to the Beach</p>);
+    }
+    return (<p>Tip: Stay Home</p>);
+  }
+
   return (
     <Container>
-      <h6>{forecast.timezone}</h6>
-      <span>{forecast.current.temp}</span>
+      <h6>Timezone: {forecast.timezone}</h6>
+      <span>Temp: {forecast.current.temp}ºC</span>
+      <p>Feels Like: {forecast.current.feels_like}ºC</p>
+      <p>Weather: {forecast.current.weather[0].description}</p>
+      <p>Humidity: {forecast.current.humidity}</p>
+      
+      {calculateWeatherCondition()}
     </Container>
   );
 };
@@ -30,11 +42,14 @@ const Container = styled.div`
   h6 {
     font-size: 2rem;
     margin-bottom: 32px;
-    margin-top: 264px;
+    ${'' /* margin-top: 264px; */}
   }
   span {
     font-size: 6rem;
-    margin-top: 32px;
+    margin-top: 8px;
+  }
+  p {
+    margin: 8px;
   }
 `;
 

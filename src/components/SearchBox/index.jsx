@@ -8,21 +8,22 @@ import api from "../../services/api";
 const SearchBox = (props) => {
   const [locations, setLocations] = useState([]);
 
-  const key = "INSERT YOUR API KEY";
+  const key = "c5988cdc7fd873077a416c80164726c8";
 
   const handleOnSelect = (location) => {
     props.setLoading(true);
     api
       .get(
-        `/lat=${location.lat}&lon=${location.lon}&&units=metric&appid=${key}`
+        `/onecall?lat=${location.lat}&lon=${location.lon}&&units=metric&appid=${key}`
       )
       .then((forecast) => {
         props.setForecast(forecast.data);
-        console.log(forecast);
-        console.log(forecast.data);
       })
       .catch((error) => {
-        console.error(erro);
+        console.error(error);
+      })
+      .finally(() => {
+        props.setLoading(false);
       });
   };
 
@@ -34,7 +35,7 @@ const SearchBox = (props) => {
   };
 
   return (
-    <Container>
+    <Container className="fibo">
       <ReactSearchAutocomplete
         items={locations}
         onSearch={handleOnSearch}
@@ -53,6 +54,7 @@ const Container = styled.div`
     margin: auto;
     width: 700px;
   }
+
 `;
 
 export default SearchBox;
